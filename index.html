@@ -3,44 +3,255 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio de [Ton Nom]</title>
+  <title>Portfolio - KOFFITSE FIADUPE AMOUZOU</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Ajouter Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Bienvenue sur mon portfolio</h1>
-    <nav>
-      <ul>
-        <li><a href="#projets">Projets</a></li>
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Barre de navigation -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home"><i class="fas fa-home"></i> Accueil</a></li>
+      <li><a href="#about"><i class="fas fa-user"></i> À propos</a></li>
+      <li><a href="#cv"><i class="fas fa-file-pdf"></i> Mon CV</a></li>
+      <li><a href="#projects"><i class="fas fa-briefcase"></i> Projets</a></li>
+      <li><a href="#certificates"><i class="fas fa-certificate"></i> Certificats</a></li>
+      <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Section d'en-tête -->
+  <header id="home" class="header">
+    <h1>Bienvenue sur mon Portfolio</h1>
+    <p>Je suis <strong>KOFFITSE  FIADUPE AMOUZOU</strong>, étudiant en baccalauréat en informatique à l’UQAR.</p>
+    <p>Passionné par le développement logiciel, la cybersécurité et les nouvelles technologies, je mets mes compétences à profit pour créer des projets innovants et résoudre des problématiques techniques.</p>
+    <p>Dans ce portfolio, vous trouverez une sélection de mes projets ainsi que des informations sur mon parcours académique et mes objectifs professionnels. N'hésitez pas à me contacter si vous souhaitez échanger ou collaborer sur de futurs projets.</p>
   </header>
+  
+
+  <!-- Section À propos -->
   <main>
-    <section id="projets">
-      <h2>Mes Projets</h2>
-      <div class="projet">
-        <h3>Projet 1</h3>
-        <p>Une description de ce projet.</p>
+    <section id="about" class="about" class="about fade-in">
+        <h2>À propos de moi</h2>
+        
+        <p>Je suis en deuxième année de baccalauréat en informatique à l'UQAR, où je me spécialise dans le développement logiciel, la cybersécurité et la conception de systèmes informatiques. Passionné par la technologie, je me consacre à l'acquisition de nouvelles compétences pour résoudre des problèmes complexes et améliorer l'efficacité des systèmes.</p>
+      
+        <!-- Section Développement logiciel -->
+        <h3><i class="fas fa-code"></i> Développement logiciel</h3>
+        <p>En développement logiciel, j'ai acquis des compétences dans plusieurs langages de programmation, dont Python, JavaScript et C++. J'ai notamment utilisé Django pour créer des applications backend complètes et sécurisées. Mon approche est centrée sur la qualité du code, la gestion efficace de la mémoire, et l'optimisation des performances.</p>
+      
+        <!-- Section Développement web -->
+        <h3><i class="fas fa-laptop-code"></i> Développement Web</h3>
+        <p>Dans le domaine du développement web, j'ai une solide expérience avec des frameworks comme React et React Native. J'ai créé plusieurs applications web et mobiles, en mettant l'accent sur une interface utilisateur intuitive et une expérience utilisateur fluide. Je maîtrise également l'intégration de l'API pour rendre les applications interactives et dynamiques.</p>
+      
+        <!-- Section Bases de données -->
+        <h3><i class="fas fa-database"></i> Gestion des Bases de données</h3>
+        <p>Je possède une solide expérience dans la gestion des bases de données, en utilisant des systèmes relationnels comme MySQL et des bases de données NoSQL comme MongoDB. J'ai une bonne maîtrise des requêtes SQL complexes, de la normalisation des données et de la gestion des transactions pour garantir l'intégrité et la performance des données.</p>
+      
+        <!-- Section Cybersécurité -->
+        <h3><i class="fas fa-shield-alt"></i> Cybersécurité</h3>
+        <p>En cybersécurité, j'ai suivi plusieurs certifications, dont l'introduction à la cybersécurité de Cisco. Je suis passionné par la protection des données et la mise en place de mesures de sécurité pour garantir la confidentialité, l'intégrité et la disponibilité des systèmes informatiques. Je m'intéresse particulièrement à la gestion des risques, à l'analyse des vulnérabilités et à la sécurisation des applications.</p>
+      
+        <!-- Section Programmation bas niveau -->
+        <h3><i class="fas fa-microchip"></i> Programmation bas niveau (Assembleur)</h3>
+        <p>En plus du développement logiciel, j'ai une solide compréhension de la programmation en assembleur. Cette compétence me permet de mieux appréhender les bases du fonctionnement des systèmes informatiques à un niveau plus bas, notamment la gestion de la mémoire, l'optimisation des performances et l'interaction directe avec le matériel.</p>
+      
+        <p>En résumé, je suis un passionné de technologie et de cybersécurité, avec une expertise solide en développement logiciel, gestion de bases de données et sécurité informatique. Je continue à me former et à relever de nouveaux défis pour rester à jour avec les dernières évolutions du domaine numérique.</p>
+      </section>
+   
+      <!-- Section CV -->
+<section id="cv" class="cv">
+    <h2>Mon CV</h2>
+    <p>Vous pouvez télécharger mon CV en format PDF en cliquant sur le bouton ci-dessous :</p>
+    <a href="Cv-AMOUZOU.pdf"   target="_blank" class="btn-download">
+        <i class="fas fa-download"></i> Voir mon CV
+      </a>
+      
+  </section>
+  
+      <!-- Section Projets -->
+<!-- Section Projets -->
+<section id="projects" class="projects"   class="about fade-in">
+    <h2>Mes projets</h2>
+    <p>Découvrez mes réalisations ci-dessous.</p>
+    <div class="project-list">
+      <!-- Projet 1: Application Jeu d'Échecs -->
+      <div class="project-item">
+        <h4><i class="fas fa-chess"></i> Application Jeu d'Échec -Emat </h4>
+        <p>Cette application de jeu d'échecs, représente l'aboutissement de nombreuses heures de travail. Elle allie ma passion pour la programmation à mon désir de créer des solutions logicielles efficaces et intuitives.</p>
+        <p>Développée en C#, cette application vous permet de jouer une partie d'échecs contre un adversaire humain ou une IA. Le projet met en avant mes compétences en programmation, ainsi que ma capacité à concevoir des interfaces utilisateurs interactives et conviviales.</p>
+        <p>Le code source est disponible gratuitement sur GitHub. Vous pourrez explorer ses fonctionnalités, contribuer, ou même me faire part de vos suggestions pour améliorer l'application.</p>
+        <a href="https://github.com/oliveboss" target="_blank" class="btn-project">
+          <i class="fab fa-github"></i> Voir sur GitHub
+        </a>
       </div>
-      <div class="projet">
-        <h3>Projet 2</h3>
-        <p>Une autre description.</p>
+      <!-- Projet 1: Application Estimation de la qualité du vin -->
+    <div class="project-item">
+        <h4><i class="fas fa-wine-glass"></i> Application Estimation de la qualité du vin </h4>
+        <p>Cette application utilise un arbre de décision pour estimer la qualité du vin en se basant sur des caractéristiques telles que le pH, le taux d'alcool et l'acidité. Le modèle d'apprentissage automatique est conçu pour prédire la qualité du vin en fonction des paramètres fournis.</p>
+        <p>Développée en C#, cette application démontre l'utilisation d'algorithmes d'apprentissage supervisé pour la prédiction de la qualité du vin. Elle combine des techniques d'analyse de données avec une interface conviviale pour permettre aux utilisateurs d'estimer la qualité d'un vin en quelques clics.</p>
+        <p>Le code source est disponible gratuitement sur GitHub. Explorez le projet pour en apprendre davantage sur l'utilisation des arbres de décision en C# et sur la prédiction des résultats dans des contextes réels.</p>
+        <a href="https://github.com/oliveboss" target="_blank" class="btn-project">
+          <i class="fab fa-github"></i> Voir sur GitHub
+        </a>
       </div>
-    </section>
-    <section id="about">
-      <h2>À propos</h2>
-      <p>Je suis [Ton Nom], développeur passionné par [tes compétences/centres d'intérêt].</p>
-    </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Envoyez-moi un email à <a href="mailto:tonemail@example.com">tonemail@example.com</a>.</p>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 [Ton Nom]. Tous droits réservés.</p>
+
+
+       <!-- Projet 3: Gestion des rendez-vous pour un garage automobile -->
+    <div class="project-item">
+        <h4><i class="fas fa-car"></i> Application Web de Gestion des rendez-vous de garages d'automobiles</h4>
+        <p>Ce projet simule la gestion des rendez-vous pour un garage automobile. Il permet aux clients de prendre des rendez-vous en ligne pour des réparations ou des services, tandis que les mécaniciens peuvent gérer leurs horaires et les détails des rendez-vous. Développé avec le framework **React**, ce site web dynamique offre une interface conviviale pour l'interaction avec les utilisateurs.</p>
+        <p>Le système comprend une gestion des profils utilisateurs (clients et mécaniciens), l'ajout et la modification de rendez-vous, ainsi que l'affichage des disponibilités des mécaniciens en temps réel. Le tout est conçu pour être facilement extensible, avec un code bien structuré et une logique métier claire.</p>
+        <p>Ce projet met en avant mes compétences en développement Front-End, particulièrement avec React, et démontre ma capacité à concevoir des applications web interactives et réactives.</p>
+        <a href="https://github.com/oliveboss" target="_blank" class="btn-project">
+          <i class="fab fa-github"></i> Voir sur GitHub
+        </a>
+      </div>
+
+<!-- Projet 4: Création d'API sécurisée avec Django et Swagger -->
+<div class="project-item">
+    <h4><i class="fas fa-cogs"></i> Création d'API sécurisée - Django & Swagger</h4>
+    <p>Ce projet consiste en la création d'une API sécurisée avec <strong>Django</strong> pour gérer les entités de l'application web de gestion des rendez-vous pour un garage automobile. L'API permet la communication avec une base de données et inclut des endpoints pour gérer les clients, les mécaniciens, les rendez-vous, et plus encore.</p>
+    <p>L'API est sécurisée grâce à l'utilisation de **tokens JWT** pour l'authentification des utilisateurs et la gestion des rôles (clients, mécaniciens). L'interface Swagger a été intégrée pour faciliter la documentation et les tests des endpoints de l'API.</p>
+    <p>Cette solution offre une architecture robuste et scalable pour gérer efficacement les données et interagir avec l'application Front-End du garage automobile, en garantissant à la fois la sécurité et la performance.</p>
+    <p>Le projet démontre mes compétences en  <strong>Développement Back-End avec Django</strong>, la création d'APIs sécurisées, et l'utilisation de Swagger pour la documentation automatique des API.</p>
+    <a href="https://github.com/oliveboss" target="_blank" class="btn-project">
+      <i class="fab fa-github"></i> Voir sur GitHub
+    </a>
+  </div>
+<!-- Projet 5: Développement logiciel - Gestion des patients -->
+<div class="project-item">
+    <h4><i class="fas fa-user-md"></i> Développement d'un logiciel de gestion des patients </h4>
+    <p>Ce projet est un logiciel de <strong>gestion des patients</strong> développé en <strong>C++</strong>  avec une interface graphique utilisant <strong>WPF (Windows Presentation Foundation)</strong>. Il permet de gérer les informations médicales des patients, incluant leurs dossiers médicaux, consultations, traitements, et autres données importantes.</p>
+    <p>L'application utilise une <strong>base de données SQL pour stocker et gérer les informations</strong> . L'architecture du projet suit les principes de <em>l'architecture Clean</em> , permettant une séparation claire des préoccupations entre la logique métier, la gestion des données, et l'interface utilisateur. Cette structure garantit une maintenance facile, une évolutivité et une flexibilité accrues pour les futures évolutions du logiciel.</p>
+    <p>Le logiciel offre des fonctionnalités comme l'ajout de nouveaux patients, la mise à jour de leurs informations médicales, le suivi des traitements et des consultations passées, tout en respectant les bonnes pratiques de conception logicielle et de gestion des données.</p>
+    <p>Ce projet démontre mes compétences en C++, WPF, et conception logicielle avec une attention particulière à l'architecture, la modularité et la qualité du code.</p>
+    <a href="https://github.com/oliveboss" target="_blank" class="btn-project">
+      <i class="fab fa-github"></i> Voir sur GitHub
+    </a>
+  </div>
+
+   
+
+   <!-- Projet 6: Développement avec Hibernate et Java -->
+   <div class="project-item">
+    <h4><i class="fas fa-database"></i> Gestion de bases de données avec Hibernate (Java)</h4>
+    <p>Ce projet est une <em>application Java</em> utilisant <em>Hibernate</em> pour la gestion de <em>bases de données</em> relationnelles. Il comprend la mise en place d'un <em>validateur personnalisé</em> pour garantir l'intégrité des données et permet d'exécuter des actions <em>CRUD</em> (Créer, Lire, Mettre à jour, Supprimer) sur les données de la base de données.</p>
+    <p>L'application est développée sous <em>Eclipse</em> et utilise <em>Hibernate ORM</em> pour la gestion des objets Java et leur mappage avec les tables de la base de données. Un validateur personnalisé a été créé pour s'assurer que les données saisies respectent des critères spécifiques avant d'être enregistrées dans la base de données. Cela permet d'améliorer la qualité des données et de réduire les erreurs.</p>
+    <p>Les actions <em>CRUD</em> sont intégrées à l'application, permettant à l'utilisateur de manipuler les données en temps réel via une interface simple. Ces actions sont exécutées avec l'aide de <em>Hibernate</em> pour interagir efficacement avec la base de données, garantissant ainsi des performances et une scalabilité optimales.</p>
+    <p>Ce projet démontre ma maîtrise de <em>Hibernate</em>, de la gestion des <em>bases de données relationnelles</em>, ainsi que de la programmation <em>Java</em> et des bonnes pratiques en matière de <em>validation</em> et d'interaction avec les données.</p>
+    <a href="https://github.com/oliveboss" target="_blank" class="btn-project">
+      <i class="fab fa-github"></i> Voir sur GitHub
+    </a>
+  </div>
+
+<!-- Projet 7 : MASM - Swapping -->
+<div class="project-item">
+    <h4><i class="fas fa-hdd"></i> Simulation de Swapping en MASM</h4>
+    <p><em>Ce projet en MASM simule le mécanisme de swapping d'un système d'exploitation. Il permet de mieux comprendre la gestion de la mémoire en déplaçant des processus entre la mémoire vive et le disque dur. À travers cette simulation, j'ai exploré les interactions entre le système d'exploitation et la gestion dynamique de la mémoire.</em></p>
+    <a href="https://github.com/oliveboss" target="_blank"  class="btn-project">  
+        <i class="fab fa-github"></i> Voir sur GitHub
+    </a>
+  </div>
+  
+<!-- Projet 7: Communication entre deux machines virtuelles avec Python -->
+<div class="project-item">
+    <h4><i class="fas fa-network-wired"></i> Communication entre Machines Virtuelles avec Python</h4>
+    <p>Ce projet consiste à établir une <em>communication réseau</em> entre deux <em>machines virtuelles</em> sur un environnement Linux, en utilisant leurs <em>adresses IP</em> respectives. Le projet a impliqué l'utilisation de <em>Wireshark</em> pour analyser les paquets réseau échangés entre les machines et s'assurer du bon fonctionnement de la communication.</p>
+    <p>Le code Python développé dans ce projet a permis d'envoyer et de recevoir des messages entre les machines virtuelles via un réseau local. Les adresses IP des machines ont été configurées de manière à faciliter la communication et à assurer une connectivité optimale.</p>
+    <p>Le suivi des paquets a été effectué à l'aide de <em>Wireshark</em>, qui a permis de visualiser en temps réel les données échangées, d'analyser les protocoles utilisés et de s'assurer de la stabilité et de la sécurité de la connexion. Ce projet met en avant mes compétences en <em>réseaux</em>, en <em>analyse de paquets</em> et en <em>programmation Python</em>.</p>
+    <p>Ce projet démontre ma capacité à configurer et à gérer des <em>réseaux virtuels</em>, à analyser des données réseau et à écrire des scripts Python pour automatiser les tâches liées à la communication entre machines virtuelles.</p>
+    <a href="https://github.com/oliveboss" target="_blank" class="btn-project">
+      <i class="fab fa-github"></i> Voir sur GitHub
+    </a>
+  </div>
+  
+
+    </div>
+
+
+
+  </section>
+     
+
+  <!-- Section Certificats -->
+<section id="certificates" class="certificates">
+    <h2>Mes Certificats</h2>
+    <p>Voici mes certificats obtenus dans le domaine de la technologie informatique   :</p>
+    
+    <div class="certificate-item">
+      <h3><i class="fas fa-certificate"></i> Introduction à la Cybersécurité (Cisco)</h3>
+      <a href="Introduction_to_Cybersecurity_Badge20250104-26-vnevrd.pdf" target="_blank" class="btn-download">
+        <i class="fas fa-download"></i> Voir le certificat
+      </a>
+    </div>
+  
+   
+  </section>
+  
+    <!-- Section Contact -->
+<section id="contact" class="contact"  class="about fade-in">
+    <h2>Contactez-moi</h2>
+    <p><i class="fas fa-paper-plane"></i> Email : <a href="mailto:amouzoukoffitse0@gmail.com">amouzoukoffitse0@gmail.com</a></p>
+    <p><i class="fas fa-phone-alt"></i> Téléphone : <a href="tel:+1 581 525 5154">+1 581 525 5154</a></p>
+    <p><i class="fas fa-map-marker-alt"></i> Adresse : 277  Rue Tachée, Rimouski, CANADA </p>
+
+  <!-- Intégration d'OpenStreetMap -->
+<div class="map-container">
+    <iframe 
+      src="https://www.openstreetmap.org/export/embed.html?bbox=-68.54068756103516%2C48.4460237411133%2C-68.53928756713867%2C48.44739603992858&layer=mapnik&marker=48.4467103897212%2C-68.53998756408691"
+      width="600" height="450" frameborder="0" style="border:0" allowfullscreen>
+    </iframe>
+  </div>
+  
+  </section>
+  
+  <!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Koffitse Amouzou. Tous droits réservés.</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/koffitse-fiadupe-amouzou-81a1302a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" title="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/oliveboss" target="_blank" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+       
+        <a href="mailto:amouzoukoffitse0@gmail.com" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
   </footer>
-  <script src="script.js"></script>
+  
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+   // Fonction qui ajoute la classe 'fade-in-visible' lorsque l'élément devient visible
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in-visible'); // Ajoute la classe pour lancer l'animation
+      observer.unobserve(entry.target); // Arrête d'observer l'élément une fois qu'il est visible
+    }
+  });
+}, {
+  threshold: 0.5 // L'élément doit être visible à 50% pour activer l'animation
+});
+
+// Sélectionne tous les éléments avec la classe 'fade-in' et commence à les observer
+document.querySelectorAll('.fade-in').forEach(element => {
+  observer.observe(element);
+});
+
+  </script>
 </body>
 </html>
