@@ -80,6 +80,18 @@ body {
     opacity: 1;
   }
   
+  /* État initial (invisible) */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  }
+  
+  /* État visible (après l'animation) */
+  .show {
+    opacity: 1;
+    transform: translateY(0);
+  }
   
 
 /* Appliquer l'animation à tous les éléments de la page */
@@ -125,6 +137,47 @@ body, main, footer, .navbar, .projects, .contact {
   .navbar a:focus {
     color: #00bfff; /* Bleu clair */
   }
+  
+/* Hamburger icon pour les petits écrans */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+  }
+  
+  /* Affichage du menu hamburger sur les petits écrans */
+  @media (max-width: 768px) {
+    /* Cacher les liens de navigation par défaut */
+    .navbar ul {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      text-align: center;
+      background: linear-gradient(135deg, #003d99, #000000, #003d99);
+      position: absolute;
+      top: 60px;
+      left: 0;
+      padding: 20px 0;
+    }
+  
+    /* Espacement des éléments de menu */
+    .navbar li {
+      margin: 10px 0;
+    }
+  
+    /* Afficher l'icône hamburger */
+    .hamburger {
+      display: block;
+    }
+  
+    /* Afficher le menu lorsque la classe 'active' est ajoutée */
+    .navbar ul.active {
+      display: flex;
+    }
+  }
+  
+
   /* Style pour le footer */
 .footer {
     background: linear-gradient(135deg, #001f3d, #003366, #001f3d);

@@ -11,7 +11,10 @@
 <body>
   <!-- Barre de navigation -->
   <nav class="navbar">
-    <ul>
+    <div class="logo">
+      <a href="#">MonPortfolio</a>
+    </div>
+    <ul class="nav-links">
       <li><a href="#home"><i class="fas fa-home"></i> Accueil</a></li>
       <li><a href="#about"><i class="fas fa-user"></i> À propos</a></li>
       <li><a href="#cv"><i class="fas fa-file-pdf"></i> Mon CV</a></li>
@@ -19,6 +22,10 @@
       <li><a href="#certificates"><i class="fas fa-certificate"></i> Certificats</a></li>
       <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
     </ul>
+    <!-- Bouton hamburger pour mobile -->
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
   </nav>
 
   <!-- Section d'en-tête -->
@@ -227,6 +234,39 @@
   </footer>
   
   <script>
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Sélectionner tous les éléments que tu veux animer
+  const elements = document.querySelectorAll('.navbar, .projects, .contact, footer');
+
+  // Ajouter la classe 'hidden' par défaut
+  elements.forEach(el => el.classList.add('hidden'));
+
+  // Créer un observer pour détecter la visibilité
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show'); // Ajouter la classe 'show'
+        observer.unobserve(entry.target); // Arrêter d'observer après l'animation
+      }
+    });
+  }, {
+    threshold: 0.1 // Déclenche l'animation lorsque 10% de l'élément est visible
+  });
+
+  // Observer chaque élément
+  elements.forEach(el => observer.observe(el));
+});
+
+  
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.querySelector(".navbar ul");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -235,22 +275,8 @@
         });
       });
     });
-   // Fonction qui ajoute la classe 'fade-in-visible' lorsque l'élément devient visible
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('fade-in-visible'); // Ajoute la classe pour lancer l'animation
-      observer.unobserve(entry.target); // Arrête d'observer l'élément une fois qu'il est visible
-    }
-  });
-}, {
-  threshold: 0.5 // L'élément doit être visible à 50% pour activer l'animation
-});
+  
 
-// Sélectionne tous les éléments avec la classe 'fade-in' et commence à les observer
-document.querySelectorAll('.fade-in').forEach(element => {
-  observer.observe(element);
-});
 
   </script>
 </body>
