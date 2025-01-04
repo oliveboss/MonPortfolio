@@ -234,6 +234,14 @@
   </footer>
   
   <script>
+ 
+ const hamburger = document.getElementById("hamburger");
+  const navLinks = document.querySelector(".navbar ul");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+
 
 document.addEventListener('DOMContentLoaded', () => {
   // Sélectionner tous les éléments que tu veux animer
@@ -258,15 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
   elements.forEach(el => observer.observe(el));
 });
 
-  
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.querySelector(".navbar ul");
-
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-
-
+ 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
