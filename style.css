@@ -344,4 +344,44 @@ h3:hover {
   .fas.fa-certificate {
     margin-right: 10px;
   }
-  
+  /* Couleurs officielles des icônes */
+.social-icons .fa-linkedin-in { color: #0A66C2; } /* LinkedIn (bleu) */
+.social-icons .fa-github { color: #181717; } /* GitHub (noir) */
+.social-icons .fa-envelope { color: #EA4335; } /* Gmail (rouge) */
+
+/* Effet hover */
+.social-icons a:hover i {
+  transform: scale(1.2); /* Agrandir l'icône */
+  transition: all 0.3s ease;
+}
+/* Couleurs des icônes de la navbar */
+.nav-links .fa-home { color: #FF5722; } /* Orange - Accueil */
+.nav-links .fa-user { color: #2196F3; } /* Bleu - À propos */
+.nav-links .fa-file-pdf { color: #F44336; } /* Rouge - CV */
+.nav-links .fa-briefcase { color: #4CAF50; } /* Vert - Projets */
+.nav-links .fa-certificate { color: #FFC107; } /* Jaune - Certificats */
+.nav-links .fa-envelope { color: #9C27B0; } /* Violet - Contact */
+
+/* Effet hover */
+.nav-links a:hover i {
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+.nav-links i {
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.nav-links a:hover i {
+  transform: rotate(15deg) scale(1.2);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.nav-links i {
+  background: rgba(0,0,0,0.1);
+  padding: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.nav-links .fa-home { background: #FF5722; color: white; }
+.nav-links .fa-user { background: #2196F3; color: white; }
+/* ... (même principe pour les autres) */
