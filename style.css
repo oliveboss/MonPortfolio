@@ -266,10 +266,10 @@ h3:hover {
     background-color: #003d99;
     color: white;
     text-align: center;
-    padding: 20px;
+    
     position: relative;
     bottom: 0;
-    width: 100%;
+    width: auto;
   }
   
   .footer-content {
@@ -385,3 +385,91 @@ h3:hover {
 .nav-links .fa-home { background: #FF5722; color: white; }
 .nav-links .fa-user { background: #2196F3; color: white; }
 /* ... (même principe pour les autres) */
+
+    .certificates {
+        padding: 2rem;
+        background: rgb(12, 12, 43);
+        border-radius: 10px;
+        margin: 2rem 0;
+        color: white;
+        /* Ajoutez ces propriétés */
+    max-height: 100vh;
+    overflow-y: auto;
+    }
+    
+    .certificates-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+         /* Nouvelle propriété pour les lignes */
+    grid-auto-rows: minmax(300px, auto);
+    }
+    
+    .certificate-card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+    }
+    
+    .certificate-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .certificate-preview {
+        position: relative;
+        height: 200px;
+        overflow: hidden;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .certificate-preview embed {
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+    
+    .certificate-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+        color: white;
+        text-decoration: none;
+    }
+    
+    .certificate-card:hover .certificate-overlay {
+        opacity: 1;
+    }
+    
+    .certificate-overlay i {
+        color: white;
+        font-size: 2rem;
+    }
+    
+    .certificate-info {
+        padding: 1rem;
+    }
+    
+    .certificate-info h3 {
+        margin: 0;
+        font-size: 1.1rem;
+    }
+    
+    .certificate-info p {
+        margin: 0.3rem 0 0;
+        color: #666;
+        font-size: 0.9rem;
+    }
+.certificate-info p i {
+    margin-right: 8px;
+}
